@@ -1,0 +1,12 @@
+header{
+	background: green;
+	font-size: 30px;
+	color: white;
+}
+
+img{
+	border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 20px;
+  width: 400px;
+}
