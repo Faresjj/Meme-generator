@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import {connect} from 'react-redux';
 
 function Header() {
   return (
@@ -12,4 +13,6 @@ function Header() {
     </header>
   );
 }
-export default Header;
+
+
+export default connect()(Header);

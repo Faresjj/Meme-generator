@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './MemeGenerator.css';
+import { connect } from 'react-redux';
 
 class MemeGenerator extends Component {
   constructor() {
@@ -37,6 +38,7 @@ handleSubmit(event) {
 };
   
   render() {
+    console.log(this.props)
     return (
     <div>
     <form className='meme-form' onSubmit={this.handleSubmit}>
@@ -66,4 +68,10 @@ handleSubmit(event) {
   }
 };
 
-export default MemeGenerator;
+const mapStateToProps = (state) => {
+return {
+  allMemeImgs: state.allMemeImgs
+}
+}
+
+export default connect(mapStateToProps)(MemeGenerator);
